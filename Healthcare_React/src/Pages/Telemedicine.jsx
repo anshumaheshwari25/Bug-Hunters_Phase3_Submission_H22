@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './Telemedicine.css'
 import { useForm } from "react-hook-form";
-
+import axios from 'axios'
 const Telemedicine = () => {
   var doctor_data = {
     doctorName: "XYZ",
@@ -160,6 +160,19 @@ const Telemedicine = () => {
 
   const submit = (data) => {
     console.log(data);
+    var newdata={
+      startTime:parseInt(data.init),
+      totalTime:20
+    }
+    // startTime: parseInt(data.init),
+    // totalTime: appointmentTime,
+    console.log(newdata);
+    axios.post('http://localhost:9999/mail',newdata).then((data)=>{
+      console.log(data);
+    })
+    .catch((error)=>{
+      console.log(error);
+    })
   };
   return (
     <div>
