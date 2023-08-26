@@ -54,6 +54,7 @@ function App() {
           <Route path="/lab" element={<Lab/>} />
           <Route path="/stock" element={<Stock/>} />
           <Route path="/data" element={<Data/>} />
+        
         </Routes>
       </div>
     </Router>
