@@ -2,7 +2,16 @@ const express=require("express");
 const app=express();
 const port=9999;
 const cors=require('cors');
+const email=require("./AppointmentBook")
 app.use(cors())
+app.use(express.json());
+app.post("/mail",(req,res)=>{
+  var p={email:"vinitchokshi1809@gmail.com",name:"VINIT"}
+  var dname={brandName:"Dr. Shandy"}
+  console.log("sdfgh",req.body)
+  email(p,dname,req.body,"res")
+  res.status(200).json({message:"EMAIL HAS BEEN SEND",data:"1"})
+})
 
 app.post('/run', (req, res) => {
     console.log(req.body); // Check the contents of the request body
