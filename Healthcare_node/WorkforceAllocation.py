@@ -4,19 +4,19 @@ import numpy as np
 
 # Data
 location_df = pd.DataFrame({
-    'location': ['General Devices', 'Surgical Devices', 'Emergency Devices'],
-    'max_resource': [500, 600, 250]
+    'location': ['Ward Boys', 'Nurses', 'Resident Doctors', 'Specialist Doctors'],
+    'max_resource': [500, 600, 250, 50]
 })
 
 work_df = pd.DataFrame({
     'work': ['Emergency Operation', 'General Operation'],
-    'min_resource': [550, 300]
+    'min_resource': [300, 600]
 })
 
-resource_cost = np.array([[150, 200], [220, 310], [210, 440]])
+resource_cost = np.array([[150, 200], [220, 310], [210, 200],[123,23]])
 
 # Create a linear programming problem
-problem = pulp.LpProblem("Resource_Allocation", pulp.LpMinimize)
+problem = pulp.LpProblem("Workforce_Allocation", pulp.LpMinimize)
 
 # Decision variables
 locations = location_df['location'].tolist()
@@ -39,7 +39,7 @@ problem.solve()
 
 # Print the results
 print("Status:", pulp.LpStatus[problem.status])
-print("LIST OF ALLOCATED RESOURCES")
+print("LIST OF ALLOCATED WORKFORCE BASED ON THEIR POSITION")
 for location in locations:
     for work in works:
         print(f"{location} for {work}: {allocation[location][work].varValue}")
