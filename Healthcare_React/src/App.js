@@ -13,9 +13,21 @@ import "./App.css";
 
 // Home element
 function App() {
+  const click=(id)=>{
+    const buttons = document.querySelectorAll(".buttons");
+    for (let i = 0; i < buttons.length; i++) {
+      if (buttons[i].id === id.toString()) {
+        buttons[i].classList.add("btn")
+        buttons[i].classList.add("btn-primary");
+      } else {
+        buttons[i].classList.remove("btn") 
+        buttons[i].classList.remove("btn-primary");
+      }
+    }
+  }
   return (
     <Router>
-      <div>
+      <div className="App">
       {/* <div className="App">
       <div className="row">
   <div className="col-4">
@@ -81,32 +93,52 @@ function App() {
       <div className="tab-pane fade" id="list-data" role="tabpanel" aria-labelledby="list-settings-list">
         <Data/>
         </div> */}
-</div>
-        <nav>
+        <nav className="d-flex flex-column">
           <ul>
             <li>
+              <button className=" buttons mt-2" id='btn1' onClick={()=>{click('btn1')}}>
               <Link to="/">Home</Link>
+              </button>
             </li>
             <li>
+              <button  className=" buttons mt-2" id='btn2'  onClick={()=>{click('btn2')}}>
+
               <Link to="/resource">Resource Allocation</Link>
+              </button>
             </li>
             <li>
+              <button  className=" buttons mt-2" id='btn3'  onClick={()=>{click('btn3')}}>
+
               <Link to="/workforce">Workforce Management</Link>
+              </button>
             </li>
             <li>
+              <button  className=" buttons mt-2" id='btn4'  onClick={()=>{click('btn4')}}>
+
               <Link to="/lab">Laboratory Optimization</Link>
+              </button>
             </li>
             <li>
+              <button  className=" buttons mt-2" id='btn5'  onClick={()=>{click('btn5')}}>
               <Link to="/telemedicine">Telemedicine Integration</Link>
+              </ button>
             </li>
             <li>
+              <button  className=" buttons mt-2" id='btn6'  onClick={()=>{click('btn6')}}>
+
               <Link to="/stock">Medicine Stock Management</Link>
+              </button>
             </li>
             <li>
+              <button  className=" buttons mt-2" id='btn7'  onClick={()=>{click('btn7')}}>
               <Link to="/inventory">Inventory Management</Link>
+              </button>
             </li>
             <li>
+              <button  className=" buttons mt-2" id='btn8'  onClick={()=>{click('btn8')}}>
+
               <Link to="/data">Data Driven Decision Making</Link>
+              </button>
             </li>
           </ul>
         </nav> 
@@ -122,6 +154,7 @@ function App() {
           <Route path="/data" element={<Data/>} />
         
         </Routes>
+        </div>
     </Router>
   );
 }

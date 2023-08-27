@@ -6,7 +6,7 @@ const Workforce = () => {
 
   const runPythonScript = async () => {
     try {
-      const data = { notebookPath: "D:\\VIREN\\Health\\healthcare-management-system\\Healthcare_node\\WorkforceAllocation.py" };
+      const data = { notebookPath: "C:\\Users\\Vinit\\OneDrive\\Desktop\\Hackout's23\\healthcare-management-system\\Healthcare_Node\\WorkforceAllocation.py" };
       const response = await axios.post("http://localhost:9999/runwork", data);
       setOutput(response.data.output);
     } catch (error) {
