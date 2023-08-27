@@ -1,4 +1,6 @@
 .App {
+  display: grid;
+  grid-template-columns: 20% 80%;
   /* text-align: center; */
 }
 
@@ -27,6 +29,38 @@
 .App-link {
   color: #61dafb;
 }
+nav ul
+{
+  list-style: none;
+  padding: 1rem 0.75rem;
+}
+
+nav ul li :any-link
+{
+  text-decoration: none;
+  outline: none;
+  color: rgba(0, 0, 0, 0.767);
+  /* border: 2px solid black; */
+  
+}
+
+nav ul li button
+{
+  /* padding: 0 0.4rem; */
+
+  width: 180px !important;
+  border: 2px solid black;
+  
+  /* transition: width 1s; */
+}
+
+/* nav ul li button:hover
+{
+  /* background-color: rgb(25, 25, 200);
+  width: 150px !important;
+  border: 2px solid black;
+  /* color: white; 
+} */
 
 @keyframes App-logo-spin {
   from {

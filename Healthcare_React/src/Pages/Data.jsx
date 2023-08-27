@@ -2,7 +2,7 @@ import React from 'react'
 
 const Data = () => {
   return (
-    <div>Data Driven Decision Making</div>
+    <div className='d-flex flex-row'>Data Driven Decision Making</div>
   )
 }
 

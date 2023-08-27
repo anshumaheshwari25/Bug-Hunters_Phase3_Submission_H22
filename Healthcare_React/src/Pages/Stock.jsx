@@ -25,6 +25,15 @@ const Stock = () => {
         console.log(error);
       })
   }
+  const deleteStock=(id)=>{
+      axios.delete('http://localhost:9999/deleteitem/'+id).then((data)=>{
+        console.log(data);
+        getData();
+        // window.location.reload();
+      }).catch((error)=>{
+        console.log(error);
+      })
+  }
   useEffect(()=>{
     getData();
   },[]);
@@ -38,10 +47,14 @@ const Stock = () => {
             <th>
               Medicine Qty
             </th>
+            <th>
+              Delete Stock
+            </th>
           </tr>
           {
         medicineData.map((e)=>{
-          return (
+          if(e.enable===1)
+          {return (
             <tr>
               <td>
                     {e.itemName}
@@ -49,14 +62,16 @@ const Stock = () => {
               <td>
                     {e.itemQty}
               </td>
-
+                <td>
+                  <button className='btn btn-danger p-2 m-2' onClick={()=>{deleteStock(e._id)}}>Delete</button>
+                </td>
             </tr>
-          )
+          )}
         })          
         }
         </table>
         
-      <form action="" onSubmit={handleSubmit(submit)} method='post'>
+      <form action="" onSubmit={handleSubmit(submit)}>
         <p className='row'>
           <label htmlFor="itemName" className='col-2'>Medicine Name</label>
         <input type="text" name="itemName" id="itemName" className='col-2'
