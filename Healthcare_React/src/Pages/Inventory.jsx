@@ -20,8 +20,9 @@ const Inventory = () => {
       })
   }
   return (
-    <div>Inventory
-      
+    <div>
+      <h2 style={{textAlign:"center"}}>Inventory Management</h2>  
+      <h5>Inventory management is the process of organizing, tracking, and controlling the storage and movement of products and supplies in a healthcare facility.</h5>    
     </div>
   )
 }

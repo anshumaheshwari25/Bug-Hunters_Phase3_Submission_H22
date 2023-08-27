@@ -1,9 +1,7 @@
-
-
 import React, { useEffect, useState } from "react";
-import './Telemedicine.css'
+import "./Telemedicine.css";
 import { useForm } from "react-hook-form";
-import axios from 'axios'
+import axios from "axios";
 const Telemedicine = () => {
   var doctor_data = {
     doctorName: "XYZ",
@@ -162,24 +160,52 @@ const Telemedicine = () => {
 
   const submit = (data) => {
     console.log(data);
-    var newdata={
-      startTime:parseInt(data.init),
-      totalTime:20
-    }
+    var newdata = {
+      startTime: parseInt(data.init),
+      totalTime: 20,
+    };
     // startTime: parseInt(data.init),
     // totalTime: appointmentTime,
     console.log(newdata);
-    axios.post('http://localhost:9999/mail',newdata).then((data)=>{
-      console.log(data);
-    })
-    .catch((error)=>{
-      console.log(error);
-    })
+    axios
+      .post("http://localhost:9999/mail", newdata)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <div>
       <>
-      <h1 style={{textAlign:"center"}}>TELEMEDICAL APPOINTMENT</h1>
+        <h1 style={{ textAlign: "center" }}>TELEMEDICAL APPOINTMENT</h1>
+        <ul>
+          <li>
+            <h5>
+              Telemedicine allows you to communicate with a healthcare provider
+              using technology. And it lets you avoid visiting a clinic or
+              hospital.
+            </h5>{" "}
+          </li>
+
+          <li>
+            <h5>
+              With telemedicine, you can talk in real time with a healthcare
+              provider about symptoms, medical issues, and more. You can use
+              video, online portals, and email to get a diagnosis and learn your
+              treatment options.
+            </h5>
+          </li>
+
+          <li>
+            <h5>
+              You can also get a prescription electronically. When necessary,
+              providers can even remotely monitor readings from medical devices
+              to keep an eye on your condition.{" "}
+            </h5>
+          </li>
+        </ul>
         <div className="schedule ">
           {dates.map((e) => {
             return (

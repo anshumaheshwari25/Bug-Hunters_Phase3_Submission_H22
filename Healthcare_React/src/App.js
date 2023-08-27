@@ -15,8 +15,8 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      
-      <div className="App">
+      <div>
+      {/* <div className="App">
       <div className="row">
   <div className="col-4">
     <div className="list-group" id="list-tab" role="tablist">
@@ -59,8 +59,8 @@ function App() {
           </li>
         </ul>
 
-      </div>
-      <div className="tab-pane fade" id="list-inventory" role="tabpanel" aria-labelledby="list-profile-list">
+      </div> */}
+      {/* <div className="tab-pane fade" id="list-inventory" role="tabpanel" aria-labelledby="list-profile-list">
         <Inventory/>
         </div>
       <div className="tab-pane fade" id="list-workforce" role="tabpanel" aria-labelledby="list-messages-list">
@@ -80,11 +80,9 @@ function App() {
         </div>
       <div className="tab-pane fade" id="list-data" role="tabpanel" aria-labelledby="list-settings-list">
         <Data/>
-        </div>
-    </div>
-  </div>
+        </div> */}
 </div>
-        {/* <nav>
+        <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -111,9 +109,9 @@ function App() {
               <Link to="/data">Data Driven Decision Making</Link>
             </li>
           </ul>
-        </nav> */}
+        </nav> 
 
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/workforce" element={<WorkforcePage/>} />
           <Route path="/resource" element={<Resource/>} />
@@ -123,8 +121,7 @@ function App() {
           <Route path="/stock" element={<Stock/>} />
           <Route path="/data" element={<Data/>} />
         
-        </Routes> */}
-      </div>
+        </Routes>
     </Router>
   );
 }
