@@ -16,6 +16,7 @@ const Resource = () => {
 
   return (
     <div>
+      <h2>Optimization of Allocation</h2>
       <button onClick={runPythonScript}>Optimize Resources</button>
       <pre>{output}</pre>
     </div>

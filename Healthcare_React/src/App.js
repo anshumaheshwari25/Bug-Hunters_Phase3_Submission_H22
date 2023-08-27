@@ -22,22 +22,22 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/inventory">Inventory Management</Link>
+              <Link to="/resource">Resource Allocation</Link>
             </li>
             <li>
               <Link to="/workforce">Workforce Management</Link>
             </li>
             <li>
-              <Link to="/resource">Resource Allocation</Link>
+              <Link to="/lab">Laboratory Optimization</Link>
             </li>
             <li>
               <Link to="/telemedicine">Telemedicine Integration</Link>
             </li>
             <li>
-              <Link to="/lab">Laboratory Optimization</Link>
+              <Link to="/stock">Medicine Stock Management</Link>
             </li>
             <li>
-              <Link to="/stock">Medicine Stock Management</Link>
+              <Link to="/inventory">Inventory Management</Link>
             </li>
             <li>
               <Link to="/data">Data Driven Decision Making</Link>
