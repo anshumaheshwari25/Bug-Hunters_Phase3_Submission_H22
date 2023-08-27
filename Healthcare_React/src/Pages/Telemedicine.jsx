@@ -203,6 +203,12 @@ const Telemedicine = () => {
               You can also get a prescription electronically. When necessary,
               providers can even remotely monitor readings from medical devices
               to keep an eye on your condition.{" "}
+              This system gives time slots, starting from the nearest slot and patient can book till the specified time by the doctor or the institute
+            </h5>
+          </li>
+          <li>
+            <h5>
+              This system gives time slots, starting from the nearest slot and patient can book till the specified time by the doctor or the institute
             </h5>
           </li>
         </ul>
