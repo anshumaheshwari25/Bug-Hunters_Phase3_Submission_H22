@@ -54,7 +54,6 @@ const genBookedMail = async (user, admin, body, response) => {
         Patient name:${user.name}<br>
         Date:${new Date(body.startTime)}<br>
         total Duration:${body.totalTime}<br>
-        Services:${string}<br>
         </div>
         `,
         // <img src="${response}" alt="QR Code">

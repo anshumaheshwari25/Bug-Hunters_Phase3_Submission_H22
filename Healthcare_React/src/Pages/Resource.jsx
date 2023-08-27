@@ -16,10 +16,10 @@ const Resource = () => {
 
   return (
     <div>
-      <button onClick={runPythonScript}>Run Python Script</button>
+      <button onClick={runPythonScript}>Optimize Resources</button>
       <pre>{output}</pre>
     </div>
   );
 };
 
-export default Resource; // Don't forget to export the component
+export default Resource;
