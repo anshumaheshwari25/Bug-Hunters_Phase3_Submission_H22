@@ -6,7 +6,8 @@ const Resource = () => {
 
   const runPythonScript = async () => {
     try {
-      const data = { notebookPath: "D:\\VIREN\\Health\\healthcare-management-system\\ResourceAllocation.py" };
+      const data = { notebookPath: "C:\\Users\\Vinit\\OneDrive\\Desktop\\Hackout's23\\healthcare-management-system\\ResourceAllocation.py"};
+      // const data = { notebookPath: "D:\\VIREN\\Health\\healthcare-management-system\\ResourceAllocation.py" };
       const response = await axios.post("http://localhost:9999/run", data);
       setOutput(response.data.output);
     } catch (error) {
