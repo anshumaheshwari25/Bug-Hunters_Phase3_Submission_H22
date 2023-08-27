@@ -7,6 +7,7 @@ const Resource = () => {
   const runPythonScript = async () => {
     try {
       const data = { notebookPath: "C:\\Users\\Vinit\\OneDrive\\Desktop\\Hackout's23\\healthcare-management-system\\ResourceAllocation.py"};
+      // const data = { notebookPath: "D:\\VIREN\\Health\\healthcare-management-system\\ResourceAllocation.py" };
       const response = await axios.post("http://localhost:9999/run", data);
       setOutput(response.data.output);
     } catch (error) {
@@ -16,10 +17,10 @@ const Resource = () => {
 
   return (
     <div>
-      <button onClick={runPythonScript}>Run Python Script</button>
+      <button onClick={runPythonScript}>Optimize Resources</button>
       <pre>{output}</pre>
     </div>
   );
 };
 
-export default Resource; // Don't forget to export the component
+export default Resource;

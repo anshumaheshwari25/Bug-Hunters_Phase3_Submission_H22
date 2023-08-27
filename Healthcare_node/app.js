@@ -15,7 +15,7 @@ app.use(express.json());
 
 // send mail to the patient
 app.post("/mail",(req,res)=>{
-  var p={email:"vinitchokshi1809@gmail.com",name:"VINIT"}
+  var p={email:"vinitchokshi1809@gmail.com",name:"Vinit"}
   var dname={brandName:"Dr. Shandy"}
   console.log("sdfgh",req.body)
   email(p,dname,req.body,"res")
@@ -48,7 +48,7 @@ app.post("/run", (req, res) => {
 
         if (indexOfStatusLine !== -1) {
           const linesBelow = lines.slice(indexOfStatusLine + 1);
-
+          
           console.log(linesBelow.join("\n").split('.0'));
           res.json({ output: linesBelow.join("\n").split('.0') });
         } else {
