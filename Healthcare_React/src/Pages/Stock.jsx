@@ -25,6 +25,14 @@ const Stock = () => {
         console.log(error);
       })
   }
+  const deleteStock=(id)=>{
+      axios.delete('http://localhost:9999/deleteitem/'+id).then((data)=>{
+        console.log(data);
+        // window.location.reload();
+      }).catch((error)=>{
+        console.log(error);
+      })
+  }
   useEffect(()=>{
     getData();
   },[]);
@@ -38,10 +46,14 @@ const Stock = () => {
             <th>
               Medicine Qty
             </th>
+            <th>
+              Delete Stock
+            </th>
           </tr>
           {
         medicineData.map((e)=>{
-          return (
+          if(e.enable===1)
+          {return (
             <tr>
               <td>
                     {e.itemName}
@@ -49,9 +61,11 @@ const Stock = () => {
               <td>
                     {e.itemQty}
               </td>
-
+                <td>
+                  <button className='btn btn-danger p-2 m-2' onClick={()=>{deleteStock(e._id)}}>Delete</button>
+                </td>
             </tr>
-          )
+          )}
         })          
         }
         </table>

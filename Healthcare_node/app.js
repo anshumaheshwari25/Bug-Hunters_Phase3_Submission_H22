@@ -95,9 +95,15 @@ catch(error)
 }
 });
 
-app.delete('/deleteitem/:id',(req,res)=>{
+app.delete('/deleteitem/:Id',async (req,res)=>{
       try{
           const id=req.params.Id;
+          console.log(id);
+          const stockData=await stockSchema.findByIdAndUpdate({_id:id},{enable:0}).then((data)=>{
+              res.status(200).json({message:"Data Delete Successfully"});
+          }).catch((error)=>{
+            res.status(404).json({message:"No Medicine Data",error:error});
+          })
       }
       catch(error)
 {
