@@ -4,3 +4,10 @@ warnings
 pandas
 matplotlib
 keras
+statsmodels==0.14.0
+seaborn
+datetime
+pylab
+pickle
+
+
